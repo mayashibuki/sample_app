@@ -1,12 +1,15 @@
 SampleApp::Application.routes.draw do
   get "users/new"
   root  'static_pages#home'
-  match '/login',   to: 'static_pages#login',   via: 'get'
-  match '/account', to: 'static_pages#account', via: 'get'
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/help',    to: 'static_pages#help',    via: 'get'
-  match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/login',   		to: 'static_pages#login',   		via: 'get'
+  match '/account', 		to: 'static_pages#account', 		via: 'get'
+  match '/account_new', 	to: 'static_pages#account_new', 	via: 'get'
+  match '/account_add', 	to: 'static_pages#account_add', 	via: 'get'
+  match '/account_edit', 	to: 'static_pages#account_edit', 	via: 'get'
+  match '/signup',  		to: 'users#new',            		via: 'get'
+  match '/help',    		to: 'static_pages#help',    		via: 'get'
+  match '/about',   		to: 'static_pages#about',   		via: 'get'
+  match '/contact', 		to: 'static_pages#contact', 		via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

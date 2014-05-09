@@ -8,6 +8,15 @@ class StaticPagesController < ApplicationController
   def account
   end
 
+  def account_new
+  end
+
+  def account_add
+  end
+
+  def account_edit
+  end
+
   def help
   end
 
