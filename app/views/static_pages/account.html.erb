@@ -1,0 +1,45 @@
+<% provide(:title, 'アカウント管理') %>
+<h1>アカウント一覧</h1>
+<p>
+                
+<div class="layout">
+    <a href="" >新規登録</a>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>企業</th>
+      <th>氏名</th>
+      <th>状態</th>
+      <th>編集</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>コスパクリエーション</td>
+      <td>田中太郎</td>
+      <td>有効</td>
+      <td><%= link_to "編集", account_path %></li>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>コスパクリエーション</td>
+      <td>田中次郎</td>
+      <td>無効</td>
+      <td><%= link_to "編集", account_path %></li>
+    </tr>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>エバーキュー</td>
+      <td>田中小次郎</td>
+      <td>有効</td>
+      <td><%= link_to "編集", account_path %></li>
+    </tr>
+    </tr>
+  </tbody>
+</table>
+</p>

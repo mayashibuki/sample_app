@@ -1,8 +1,32 @@
 <% provide(:title, 'Login') %>
 <h1>Login</h1>
 <p>
-  Get help on the Ruby on Rails Tutorial at the
-  <a href="http://railstutorial.jp/help">Rails Tutorial help page</a>.
-  To get help on this sample app, see the
-  <a href="http://railstutorial.jp/book">Rails Tutorial book</a>.
+<div>
+	<p>
+		IDとパスワードを入力してください。
+	</p>
+
+	<table>
+		<tbody>
+		<tr>
+			<th>
+				メールアドレス
+			</th>
+			<td>
+				<div class="input text required">
+					<input type="text" name="email" maxlength="32" value="">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>パスワード</th>
+			<td>
+				<div class="input password">
+					<input type="password" name="password"  maxlength="32" value="">
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>	
 </p>

@@ -1,9 +1,10 @@
 SampleApp::Application.routes.draw do
   get "users/new"
   root  'static_pages#home'
+  match '/login',   to: 'static_pages#login',   via: 'get'
+  match '/account', to: 'static_pages#account', via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'
-  match '/login',   to: 'static_pages#login',   via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
