@@ -17,9 +17,6 @@ class StaticPagesController < ApplicationController
   def account_edit
   end
 
-  def account_pass
-  end
-
   def help
   end
 

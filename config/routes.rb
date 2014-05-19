@@ -6,7 +6,6 @@ SampleApp::Application.routes.draw do
   match '/account_new', 	to: 'static_pages#account_new', 	via: 'get'
   match '/account_add', 	to: 'static_pages#account_add', 	via: 'get'
   match '/account_edit', 	to: 'static_pages#account_edit', 	via: 'get'
-  match '/account_pass', 	to: 'static_pages#account_pass', 	via: 'get'
   match '/signup',  		to: 'users#new',            		via: 'get'
   match '/help',    		to: 'static_pages#help',    		via: 'get'
   match '/about',   		to: 'static_pages#about',   		via: 'get'
