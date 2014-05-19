@@ -20,6 +20,12 @@ class StaticPagesController < ApplicationController
   def account_pass
   end
 
+  def item 
+  end
+
+  def item_edit 
+  end
+
   def help
   end
 

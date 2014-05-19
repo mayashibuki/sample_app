@@ -1,0 +1,122 @@
+<% provide(:title, '商品管理') %>
+<script>
+    $('#datetimepicker1').datetimepicker({
+        format : 'yyyy/MM/dd hh:mm:ss'
+    });
+</script>
+<h1>商品編集</h1>
+<p>
+<form class="form-horizontal">
+    <fieldset>
+        <div class="control-group">
+            <label class="control-label" for="input01">関連グループ</label>
+			<div class="controls">
+              <select id="select01">
+                <option>関連グループ1</option>
+                <option>関連グループ2</option>
+                <option>関連グループ3</option>
+                <option>関連グループ4</option>
+                <option>関連グループ5</option>
+              </select>
+            </div>          
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">運営会社</label>
+			<div class="controls">
+              <select id="select01">
+                <option>運営会社1</option>
+                <option>運営会社2</option>
+                <option>運営会社3</option>
+              </select>
+            </div>          
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">販売商品名</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="name">
+                <p class="help-block">※全角文字○○以内</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">内部商品名</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="name">
+                <p class="help-block">※全角文字○○以内</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">下限売価</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="name">円
+                <p class="help-block">※数字のみ</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">送料設定</label>
+            <div class="controls">
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    する
+                </label>
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    しない
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">送料</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="name">円
+                <p class="help-block">※数字のみ</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">送料日付指定</label>
+            <div class="controls">
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    可能
+                </label>
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    不可
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">販売開始日</label>
+            <div class="controls">
+        		<div id="datetimepicker1" class="input-append">
+    				<input type="text"/><span class="add-on"><i></i></span>
+				</div>
+        	</div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">販売終了日</label>
+            <div class="controls">
+        		<div id="datetimepicker1" class="input-append">
+    				<input type="text"/><span class="add-on"><i></i></span>
+				</div>
+        	</div>
+        </div>
+		<div class="control-group">
+            <label class="control-label">状態</label>
+            <div class="controls">
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    有効 
+                </label>
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    無効
+                </label>
+            </div>
+        </div>
+    	<div class="form-actions">
+	        <button type="submit" class="btn">確認</button>
+		</div>
+    </fieldset>
+</form>
+</p>
+
