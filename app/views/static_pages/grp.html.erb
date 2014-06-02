@@ -1,0 +1,52 @@
+<% provide(:title, '素材管理') %>
+<h1>素材一覧</h1>
+<p>
+
+
+<form class="well form-search">
+	商品名<input type="text" class="input-medium search-query">
+	<button type="submit" class="btn"> 検 索 </button>
+</form>
+
+ 
+<div class="button">
+	<td><%= link_to "新規商品登録", grp_edit_path %></li>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>商品名</th>
+      <th>素材名</th>
+      <th>状態</th>
+      <th>編集</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>布団</td>
+      <td>素材○○</td>
+      <td>承認待ち</td>
+      <td><%= link_to "編集", grp_edit_path %></li>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>テーブル</td>
+      <td>素材○○</td>
+      <td>無効</td>
+      <td><%= link_to "編集", grp_edit_path %></li>
+    </tr>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>椅子</td>
+      <td>素材○○</td>
+      <td>有効</td>
+      <td><%= link_to "編集", grp_edit_path %></li>
+    </tr>
+    </tr>
+  </tbody>
+</table>
+</p>

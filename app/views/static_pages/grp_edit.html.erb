@@ -1,0 +1,101 @@
+<% provide(:title, '素材管理') %>
+<script>
+    $('#datetimepicker1').datetimepicker({
+        format : 'yyyy/MM/dd hh:mm:ss'
+    });
+</script>
+<script type="text/javascript">
+    $('input[id=lefile]').change(function() {
+        $('#photoCover').val($(this).val());
+    });
+</script>
+<h1>素材編集</h1>
+<p>
+<form class="form-horizontal">
+    <fieldset>
+        <div class="control-group">
+            <label class="control-label" for="input01">素材名</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="name">
+                <p class="help-block">※全角文字○○以内</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">WEBページ</label>
+			<div class="controls">
+                <input id="lefile" type="file" style="display:none">
+                <div class="input-append">
+                    <input id="photoCover" class="input-large" type="text">
+                    <a class="btn" onclick="$('input[id=lefile]').click();">参照</a>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">画像</label>
+			<div class="controls">
+                <input id="lefile" type="file" style="display:none">
+                <div class="input-append">
+                    <input id="photoCover" class="input-large" type="text">
+                    <a class="btn" onclick="$('input[id=lefile]').click();">参照</a>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">バナー</label>
+			<div class="controls">
+                <input id="lefile" type="file" style="display:none">
+                <div class="input-append">
+                    <input id="photoCover" class="input-large" type="text">
+                    <a class="btn" onclick="$('input[id=lefile]').click();">参照</a>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">表示状態</label>
+            <div class="controls">
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    表示
+                </label>
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    非表示
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">表示開始日時</label>
+            <div class="controls">
+        		<div id="datetimepicker1" class="input-append">
+    				<input type="text"/><span class="add-on"><i></i></span>
+				</div>
+        	</div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">表示終了日時</label>
+            <div class="controls">
+        		<div id="datetimepicker1" class="input-append">
+    				<input type="text"/><span class="add-on"><i></i></span>
+				</div>
+        	</div>
+        </div>
+		<div class="control-group">
+            <label class="control-label">状態</label>
+            <div class="controls">
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    有効 
+                </label>
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    無効
+                </label>
+            </div>
+        </div>
+    	<div class="form-actions">
+	        <button type="submit" class="btn">確認</button>
+		</div>
+    </fieldset>
+</form>
+</p>
+

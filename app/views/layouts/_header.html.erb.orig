@@ -7,9 +7,12 @@
           <li><%= link_to "Home",    root_path %></li>
           <li><%= link_to "Login",   login_path %></li>
           <li><%= link_to "Account", account_path %></li>
+<<<<<<< HEAD
+=======
           <li><%= link_to "Item", 	 item_path %></li>
-          <li><%= link_to "Sozai",   grp_path %></li>
           <li><%= link_to "Password", account_pass_path %></li>
+>>>>>>> origin/master
+          <li><%= link_to "Help",    help_path %></li>
           <li><%= link_to "Sign in", '#' %></li>
         </ul>
       </nav>

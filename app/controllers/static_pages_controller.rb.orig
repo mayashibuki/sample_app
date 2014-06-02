@@ -17,6 +17,8 @@ class StaticPagesController < ApplicationController
   def account_edit
   end
 
+<<<<<<< HEAD
+=======
   def account_pass
   end
 
@@ -26,12 +28,7 @@ class StaticPagesController < ApplicationController
   def item_edit 
   end
 
-  def grp 
-  end
-
-  def grp_edit 
-  end
-
+>>>>>>> origin/master
   def help
   end
 

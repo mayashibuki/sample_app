@@ -9,57 +9,41 @@
 <form class="form-horizontal">
     <fieldset>
         <div class="control-group">
-            <label class="control-label" for="input01">関連グループ</label>
-			<div class="controls">
-              <select id="select01">
-                <option>関連グループ1</option>
-                <option>関連グループ2</option>
-                <option>関連グループ3</option>
-                <option>関連グループ4</option>
-                <option>関連グループ5</option>
-              </select>
-            </div>          
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="input01">運営会社</label>
-			<div class="controls">
-              <select id="select01">
-                <option>運営会社1</option>
-                <option>運営会社2</option>
-                <option>運営会社3</option>
-              </select>
-            </div>          
-        </div>
-        <div class="control-group">
             <label class="control-label" for="input01">販売商品名</label>
             <div class="controls">
-                <input type="text" class="input-xlarge" id="name">
+                <input type="text" class="input-xlarge" id="item_disp_name">
                 <p class="help-block">※全角文字○○以内</p>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="input01">内部商品名</label>
             <div class="controls">
-                <input type="text" class="input-xlarge" id="name">
+                <input type="text" class="input-xlarge" id="item_supplier_name">
                 <p class="help-block">※全角文字○○以内</p>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="input01">下限売価</label>
             <div class="controls">
-                <input type="text" class="input-xlarge" id="name">円
+                <input type="text" class="input-xlarge" id="item_decided_sales_price">円
                 <p class="help-block">※数字のみ</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input01">卸価格</label>
+            <div class="controls">
+                50,500円(下限売価を元に自動計算）
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">送料設定</label>
             <div class="controls">
                 <label class="radio">
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="item_carriage_flag" id="item_carriage_flag1" value="1" checked>
                     する
                 </label>
                 <label class="radio">
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="item_carriage_flag" id="item_carriage_flag0" value="0">
                     しない
                 </label>
             </div>
@@ -67,19 +51,19 @@
         <div class="control-group">
             <label class="control-label" for="input01">送料</label>
             <div class="controls">
-                <input type="text" class="input-xlarge" id="name">円
+                <input type="text" class="input-xlarge" id="item_carriage_cost">円
                 <p class="help-block">※数字のみ</p>
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label">送料日付指定</label>
+            <label class="control-label">配送日付指定</label>
             <div class="controls">
                 <label class="radio">
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="item_selection_delivery_date_flag" id="item_selection_delivery_date_flag1" value="1" checked>
                     可能
                 </label>
                 <label class="radio">
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="item_selection_delivery_date_flag" id="item_selection_delivery_date_flag0" value="0">
                     不可
                 </label>
             </div>
@@ -87,7 +71,7 @@
         <div class="control-group">
             <label class="control-label">販売開始日</label>
             <div class="controls">
-        		<div id="datetimepicker1" class="input-append">
+        		<div id="item_disp_start_datetime" class="input-append">
     				<input type="text"/><span class="add-on"><i></i></span>
 				</div>
         	</div>
@@ -95,7 +79,7 @@
         <div class="control-group">
             <label class="control-label">販売終了日</label>
             <div class="controls">
-        		<div id="datetimepicker1" class="input-append">
+        		<div id="item_disp_end_datetime" class="input-append">
     				<input type="text"/><span class="add-on"><i></i></span>
 				</div>
         	</div>
