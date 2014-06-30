@@ -1,0 +1,70 @@
+<% provide(:title, '承認管理') %>
+<h1>承認一覧</h1>
+<p>
+
+
+<form class="well form-search">
+    <div class="control-group">
+        <label class="control-label" for="inlineCheckboxes">承認状態</label>
+        <div class="controls">
+            <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1" checked> 未承認
+            </label>
+            <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 承認済み
+            </label>
+        </div>
+    </div>
+        
+    <div class="control-group">
+	    商品名<input type="text" class="input-medium search-query">
+    </div>
+	<button type="submit" class="btn"> 検 索 </button>
+</form>
+
+ 
+<table class="table">
+  <thead>
+    <tr>
+      <th>依頼No</th>
+      <th>会社名</th>
+      <th>商品名</th>
+      <th>登録素材数</th>
+      <th>登録状況</th>
+      <th>状態</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>コスパクリエーション</td>
+      <td>布団</td>
+      <td>3</td>
+      <td>登録済</td>
+      <td>承認待ち</td>
+      <td><%= link_to "承認確認", approval_edit_path %></li>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>コスパクリエーション</td>
+      <td>テーブル</td>
+      <td>7</td>
+      <td>未登録</td>
+      <td>承認待ち</td>
+      <td><%= link_to "承認確認", approval_edit_path %></li>
+    </tr>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>株式会社てすと</td>
+      <td>椅子</td>
+      <td>12</td>
+      <td>登録済</td>
+      <td>承認待ち</td>
+      <td><%= link_to "承認確認", approval_edit_path %></li>
+    </tr>
+    </tr>
+  </tbody>
+</table>
+</p>

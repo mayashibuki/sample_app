@@ -40,4 +40,11 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+  
+  def approval 
+  end
+
+  def approval_edit 
+  end
+
 end
