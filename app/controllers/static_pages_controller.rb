@@ -47,4 +47,10 @@ class StaticPagesController < ApplicationController
   def approval_edit 
   end
 
+  def stock 
+  end
+
+  def stock_edit
+  end
+
 end
