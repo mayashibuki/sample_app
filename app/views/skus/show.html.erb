@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item tbl:</strong>
+  <%= @sku.item_tbl_id %>
+</p>
+
+<p>
+  <strong>Sku type1:</strong>
+  <%= @sku.SKU_type1_id %>
+</p>
+
+<p>
+  <strong>Sku type2:</strong>
+  <%= @sku.SKU_type2_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @sku.status %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @sku.comment %>
+</p>
+
+<%= link_to 'Edit', edit_sku_path(@sku) %> |
+<%= link_to 'Back', skus_path %>

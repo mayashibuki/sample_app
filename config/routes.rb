@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+
   get "users/new"
   root  'static_pages#home'
   match '/login',   		to: 'static_pages#login',   		via: 'get'
@@ -19,6 +20,15 @@ SampleApp::Application.routes.draw do
   match '/approval_edit', 	to: 'static_pages#approval_edit',   via: 'get'
   match '/stock', 	        to: 'static_pages#stock',    	    via: 'get'
   match '/stock_edit', 	    to: 'static_pages#stock_edit',      via: 'get'
+
+  resources :skus do
+    collection do
+      get 'import_csv_new'
+      post 'import_csv'
+    end
+  end
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

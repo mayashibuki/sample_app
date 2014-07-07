@@ -1,0 +1,50 @@
+<h1>在庫管理</h1>
+
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#1" data-toggle="tab">CSVダウンロード</a></li>
+<li><a href="#2" data-toggle="tab">CSVアップロード</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="1">
+<h2>CSVファイルダウンロード</h2>
+<form class="well form-search">
+  <div class="field"> 
+    <label class="control-label" for="input01">関連商品グループ</label>
+        <select id="select01">
+            <option>布団</option>
+            <option>椅子</option>
+            <option>ベッド</option>
+        </select>
+     </div>
+  <div class="field"> 
+	商品ID<input type="text" class="input-medium search-query">
+     </div>
+  <div class="field"> 
+	商品名<input type="text" class="input-medium search-query">
+     </div>
+</form>
+<%= form_tag({controller: "skus", action: "import_csv", method: "post"}, {multipart: true}) do %>
+  <div class="actions">
+    <%= submit_tag "CSVファイルを出力"%>
+  </div>
+<% end %>
+</div>
+<div class="tab-pane" id="2">
+<h2>CSVファイルアップロード</h2>
+<%= form_tag({controller: "skus", action: "import_csv", method: "post"}, {multipart: true}) do %>
+  <div class="field"> 
+    <%= file_field_tag :csv_file %>
+  </div>
+  
+  <div class="actions">
+    <%= submit_tag "CSVファイルを入力（在庫更新）"%>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
+
+
+<%= link_to '戻る', skus_path %>
+

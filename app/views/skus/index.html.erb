@@ -1,0 +1,35 @@
+<h1>Listing skus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item tbl</th>
+      <th>Sku type1</th>
+      <th>Sku type2</th>
+      <th>Status</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skus.each do |sku| %>
+      <tr>
+        <td><%= sku.item_tbl_id %></td>
+        <td><%= sku.SKU_type1_id %></td>
+        <td><%= sku.SKU_type2_id %></td>
+        <td><%= sku.status %></td>
+        <td><%= sku.comment %></td>
+        <td><%= link_to 'Show', sku %></td>
+        <td><%= link_to 'Edit', edit_sku_path(sku) %></td>
+        <td><%= link_to 'Destroy', sku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sku', new_sku_path %>
