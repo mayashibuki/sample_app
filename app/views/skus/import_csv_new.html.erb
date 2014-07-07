@@ -24,7 +24,7 @@
 	商品名<input type="text" class="input-medium search-query">
      </div>
 </form>
-<%= form_tag({controller: "skus", action: "import_csv", method: "post"}, {multipart: true}) do %>
+<%= form_tag({controller: "skus", action: "export_csv", method: "post"}, {multipart: true}) do %>
   <div class="actions">
     <%= submit_tag "CSVファイルを出力"%>
   </div>

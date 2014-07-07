@@ -66,15 +66,26 @@ class SkusController < ApplicationController
   end
       
   def import_csv
+    @sku = Sku.new
+ 
     respond_to do |format|
-      if User.impotr_csv(params[:csv_file])
-        format.html { redirect_to users_path }
+      if @sku.import_csv(params[:csv_file])
+        format.html { redirect_to skus_path }
         format.json { head :no_content }
       else
-        format.html { redirect_to users_path, :notice => "CSVファイルの読み込みに失敗しました。" }
+        format.html { redirect_to skus_path, :notice => "CSVファイルの読み込みに失敗しました。" }
         format.json { head :no_content }
       end
     end
+  end
+
+  def export_csv
+    @filepath = Rails.root + 'tmp/files/sample.csv';
+    send_file(@filepath,
+      :type => 'text/csv',
+          :disposition => 'attachment',
+          :filename => "sample.csv",
+          :status => 200)
   end
 
   private

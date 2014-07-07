@@ -25,6 +25,7 @@ SampleApp::Application.routes.draw do
     collection do
       get 'import_csv_new'
       post 'import_csv'
+      post 'export_csv'
     end
   end
 
